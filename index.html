@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="c.css">
+    
+</head>
+<body class="light-mode">
+
+     
+    <nav class="navbar">
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+        <div class="logo">Music Library</div>
+        <ul class="nav-links">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#featured-playlists">Featured Playlists</a></li>
+            <li><a href="#recommended-albums">Recommended Albums</a></li>
+            <li><a href="#user-reviews">User Reviews</a></li>
+            <li>"  ."</li>
+            <li></li>
+        </ul>
+    </nav>
+    <div class="btn">
+        <li><a href="#master">Intro</a></li>
+    </div>
+
+    <section id="intro" class="intro-section">
+        <div class="intro-left">
+            <h1>Welcome to Music Library</h1>
+            <p>Where every song has its own feel</p>
+            <button onclick="document.getElementById('featured-playlists').scrollIntoView({ behavior: 'smooth' });">
+                Featured Playlists
+                
+            </button>
+        </div>
+        <div class="intro-right">
+            <img src="images/music.svg" alt="Music SVG" class="intro-svg">
+        </div>
+    </section>
+
+    <section id="featured-playlists" class="featured-section">
+        <h2>Featured Playlists</h2>
+        <p>Check out our top featured playlists</p>
+        <div class="playlist-cards">
+            <div class="playlist-card">
+                <img src="images/1.svg" alt="Playlist 1">
+                <div class="playlist-info">
+                    <h3>Top Hits</h3>
+                    <p>Best hits of the year</p>
+                    <div class="song-count">20 songs</div>
+                </div>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="playlist-card">
+                <img src=" images/2.svg" alt="Playlist 2">
+                <div class="playlist-info">
+                    <h3>Chill Vibes</h3>
+                    <p>Relax and unwind</p>
+                    <div class="song-count">180 songs</div>
+                </div>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="playlist-card">
+                <img src="images/3.svg" alt="Playlist 3">
+                <div class="playlist-info">
+                    <h3>Workout Mix</h3>
+                    <p>Get pumped for your workout</p>
+                    <div class="song-count">220 songs</div>
+                </div>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="playlist-card">
+                <img src="images/4.svg" alt="Playlist 4">
+                <div class="playlist-info">
+                    <h3>Classic Rock</h3>
+                    <p>Timeless rock anthems</p>
+                    <div class="song-count">288 songs</div>
+                </div>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommended-albums" class="recommended-section">
+        <h2>Recommended Albums</h2>
+        <p>Discover albums we think you'll love</p>
+        <div class="search-bar">
+            <input type="text" placeholder="Search albums...">
+            <div class="search-icon">🔍</div>
+        </div>
+        <div class="album-cards">
+            <div class="album-card">
+                <img src="images/a.svg" alt="Album 1">
+                <div class="album-info">
+                    <h3>Album One</h3>
+                    <p>Artist One</p>
+                </div>
+                <button class="know-more-btn">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="images/b.svg" alt="Album 2">
+                <div class="album-info">
+                    <h3>Album Two</h3>
+                    <p>Artist Two</p>
+                </div>
+                <button class="know-more-btn">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="images/c.svg" alt="Album 3">
+                <div class="album-info">
+                    <h3>Album Three</h3>
+                    <p>Artist Three</p>
+                </div>
+                <button class="know-more-btn">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="images/d.svg" alt="Album 4">
+                <div class="album-info">
+                    <h3>Album Four</h3>
+                    <p>Artist Four</p>
+                </div>
+                <button class="know-more-btn">Know More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="user-reviews" class="reviews-section">
+        <h2>User Reviews</h2>
+        <p>What my friends are saying</p>
+        <div class="review-cards">
+            <div class="review-card">
+                <img src="images/p1.svg" alt="User 1">
+                <div class="review-info">
+                    <h3>SIMBA</h3>
+                    <p>Great music collection!</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="images/p2.svg" alt="User 2">
+                <div class="review-info">
+                    <h3>ABHINAV</h3>
+                    <p>Love the playlists!</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="images/p3.svg" alt="User 3">
+                <div class="review-info">
+                    <h3>HEMANTH</h3>
+                    <p>Awesome experience!</p>
+                </div>
+            </div>
+        </div>
+        <div class="review-form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Your review"></textarea>
+            <button>Submit</button>
+        </div>
+    </section>
+     
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://terms.com" target="_blank">Terms & Conditions</a>
+            <a href="https://privacy.com" target="_blank">Privacy Policy</a>
+        </div>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⏫</button>
+    </footer>
+     
+
+</body>
+</html>
