@@ -16,27 +16,26 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-    
+        
+    <img src="images/moon.png" id="icon">
         <div class="logo">Music Library</div>
         <ul class="nav-links">
             <li><a href="#intro">Intro</a></li>
             <li><a href="#featured-playlists">Featured Playlists</a></li>
             <li><a href="#recommended-albums">Recommended Albums</a></li>
             <li><a href="#user-reviews">User Reviews</a></li>
-            <li>"  ."</li>
+            <li>"  "</li>
             <li></li>
         </ul>
     </nav>
-    <div class="btn">
-        <li><a href="#master">Intro</a></li>
-    </div>
+    
 
     <section id="intro" class="intro-section">
         <div class="intro-left">
             <h1>Welcome to Music Library</h1>
             <p>Where every song has its own feel</p>
-            <button onclick="document.getElementById('featured-playlists').scrollIntoView({ behavior: 'smooth' });">
-                Featured Playlists
+            <button onclick="document.getElementById('recommended-albums').scrollIntoView({ behavior: 'smooth' });">
+                Recommended Albums
                 
             </button>
         </div>
@@ -52,16 +51,22 @@
             <div class="playlist-card">
                 <img src="images/1.svg" alt="Playlist 1">
                 <div class="playlist-info">
-                    <h3>Top Hits</h3>
+                    <h3>Top Hits ▶️</h3>
+                    
                     <p>Best hits of the year</p>
-                    <div class="song-count">20 songs</div>
+                    
+                    <div class="song-count">200 songs</div>
+                     
+
                 </div>
                 <button class="follow-btn">Follow</button>
+                 
             </div>
+             
             <div class="playlist-card">
                 <img src=" images/2.svg" alt="Playlist 2">
                 <div class="playlist-info">
-                    <h3>Chill Vibes</h3>
+                    <h3>Chill Vibes ▶️</h3>
                     <p>Relax and unwind</p>
                     <div class="song-count">180 songs</div>
                 </div>
@@ -70,7 +75,7 @@
             <div class="playlist-card">
                 <img src="images/3.svg" alt="Playlist 3">
                 <div class="playlist-info">
-                    <h3>Workout Mix</h3>
+                    <h3>Workout Mix ▶️</h3>
                     <p>Get pumped for your workout</p>
                     <div class="song-count">220 songs</div>
                 </div>
@@ -79,7 +84,7 @@
             <div class="playlist-card">
                 <img src="images/4.svg" alt="Playlist 4">
                 <div class="playlist-info">
-                    <h3>Classic Rock</h3>
+                    <h3>Classic Rock ▶️</h3>
                     <p>Timeless rock anthems</p>
                     <div class="song-count">288 songs</div>
                 </div>
@@ -101,15 +106,19 @@
                 <div class="album-info">
                     <h3>Album One</h3>
                     <p>Artist One</p>
+                    <div class="play">▶️</div>
                 </div>
                 <button class="know-more-btn">Know More</button>
+                 
             </div>
             <div class="album-card">
                 <img src="images/b.svg" alt="Album 2">
                 <div class="album-info">
                     <h3>Album Two</h3>
                     <p>Artist Two</p>
+                    <div class="play">▶️</div>
                 </div>
+                 
                 <button class="know-more-btn">Know More</button>
             </div>
             <div class="album-card">
@@ -117,6 +126,7 @@
                 <div class="album-info">
                     <h3>Album Three</h3>
                     <p>Artist Three</p>
+                    <div class="play">▶️</div>
                 </div>
                 <button class="know-more-btn">Know More</button>
             </div>
@@ -125,6 +135,7 @@
                 <div class="album-info">
                     <h3>Album Four</h3>
                     <p>Artist Four</p>
+                    <div class="play">▶️</div>
                 </div>
                 <button class="know-more-btn">Know More</button>
             </div>
@@ -164,6 +175,22 @@
             <button>Submit</button>
         </div>
     </section>
+     <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('nav-active');
+        });
+
+        document.getElementById('follow').addEventListener('change', function() {
+            const followText = document.querySelector('.follow-text');
+            if (this.checked) {
+                followText.textContent = 'Following';
+                followText.style.backgroundColor = 'green';
+            } else {
+                followText.textContent = 'Follow';
+                followText.style.backgroundColor = 'blue';
+            }
+        });
+    </script>
      
     <!-- Footer -->
     <footer class="footer">
@@ -178,7 +205,17 @@
         </div>
         <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⏫</button>
     </footer>
-     
+     <script>
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+            document.body.classList.toggle("dark-theme")
+        if(document.body.classList.contains("dark-theme")){
+            icon.src="images/sun.png";
+        }else{
+            icon.src="images/moon.png";
+        }
+        }
+     </script>
 
 </body>
 </html>

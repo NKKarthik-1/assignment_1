@@ -2,55 +2,100 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #198094;
+    background-color: #b43535;
+    color: rgb(25, 128, 148);
 }
-
+:root{
+    --primary-color:white;
+    --secondary-color:rgba(0, 0, 0);
+}
+.dark-theme{
+    --secondary-color:rgb(147, 135, 135);
+    --primary-color:rgba(50, 19, 19, 0.411);
+}
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    padding: 10px;
 }
 
- 
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color:var(--primary-color);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    
+}
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 60px;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: #2c8073;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+     
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
+    margin-left: -45px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .navbar .nav-links {
     list-style: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
 }
 
 .navbar .nav-links li {
-    margin-left: 9rem;
+    margin-left: 10px;
 }
 
 .navbar .nav-links a {
-    color: #fff;
+    color:var(--primary-color);
     text-decoration: none;
-    font-size: 1;
+    font-size: 1.5;
+    margin-left: 40px;
+    flex:auto;
 }
 
 .navbar .nav-links a:hover {
     text-decoration: underline;
+    color: #198094;
 }
 
 .intro-section {
@@ -58,7 +103,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
     margin-top: 60px; /* to offset the fixed navbar */
 }
 
@@ -76,11 +121,17 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
+#icon{
+    width: 30px;
+    cursor: pointer;
+   
+}
+ 
 
 .intro-left button {
     padding: 0.5rem 1rem;
     background-color: #007bff;
-    color: #fff;
+    color: var(--primary-color);
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -98,7 +149,7 @@ body {
 
 .featured-section {
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color:var(--primary-color);
     text-align: center;
 }
 
@@ -119,8 +170,8 @@ body {
 }
 
 .playlist-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 8px;
     overflow: hidden;
     width: 200px;
@@ -153,16 +204,25 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
+}
+.play{
+    font-size: large;
+    border-radius: 100px;
+    position:absolute;
+    top:10px;
+    right: 10px;
+    border-radius: 4px;
+    background-color: #198094;
 }
 
 .follow-btn {
     padding: 0.5rem;
     background-color: #007bff;
-    color: #fff;
+    color: var(--primary-color);
     border: none;
     cursor: pointer;
     width: 100%;
@@ -171,7 +231,7 @@ body {
 
 .recommended-section {
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
     text-align: center;
 }
 
@@ -196,7 +256,7 @@ body {
     padding: 0.5rem;
     font-size: 1rem;
     width: 200px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
 }
 
@@ -212,8 +272,8 @@ body {
 }
 
 .album-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 8px;
     overflow: hidden;
     width: 200px;
@@ -247,17 +307,21 @@ body {
 
 .know-more-btn {
     padding: 0.5rem;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #517294;
+    color: var(--primary-color);
     border: none;
     cursor: pointer;
     width: 100%;
     text-align: center;
 }
+.know-more-btn :hover{
+    background-color: #198094;
+    width: max-content;
+}
 
 .reviews-section {
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: var(--primary-color);
     text-align: center;
 }
 
@@ -267,7 +331,8 @@ body {
 }
 
 .reviews-section p {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 2rem;
 }
 
@@ -278,9 +343,9 @@ body {
 }
 
 .review-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
     overflow: hidden;
     width: 200px;
     margin: 1rem;
@@ -289,7 +354,7 @@ body {
 
 .review-card img {
     width: 100%;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .review-info {
@@ -319,64 +384,72 @@ body {
     margin: 0.5rem 0;
     width: 100%;
     max-width: 300px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
 }
 
 .review-form button {
     padding: 0.5rem 1rem;
     background-color: #007bff;
-    color: #fff;
+    color: var(--primary-color);
+    border-radius: 2em;
     border: none;
     cursor: pointer;
     font-size: 1rem;
 }
+.review-form a :hover{
+    color:var(--secondary-color);
+    font-weight: 600;
 
+}
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 1rem;
     text-align: center;
 }
 
 .footer a {
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
     margin: 0 1rem;
 }
 
 .footer a:hover {
     text-decoration: underline;
+
+    color: #007bff;
 }
 
 .footer button {
     padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    background-color: #5d9feb;
+    color: var(--primary-color);
+    border : none;
+    border-radius: 8em;
     cursor: pointer;
     font-size: 1rem;
     margin-top: 1rem;
 }
 
 body.light-mode {
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
     color: #333;
 }
 
 body.dark-mode {
-    background-color: #333;
-    color: #f0f0f0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 body.dark-mode .navbar,
 body.dark-mode .footer {
-    background-color: #222;
+    background-color: var(--secondary-color);
 }
 
 body.dark-mode .navbar .nav-links a,
 body.dark-mode .footer a {
-    color: #ddd;
+    color: var(--primary-color);
 }
 
 body.dark-mode .intro-section,
@@ -384,7 +457,7 @@ body.dark-mode .featured-section,
 body.dark-mode .recommended-section,
 body.dark-mode .reviews-section {
     background-color: #444;
-    color: #f0f0f0;
+    color:var(--primary-color);
 }
 
 body.dark-mode .playlist-card,
@@ -398,5 +471,5 @@ body.dark-mode .follow-btn,
 body.dark-mode .know-more-btn,
 body.dark-mode .review-form button {
     background-color: #007bff;
-    color: #fff;
+    color: var(--primary-color);
 }
